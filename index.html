@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- My Stuff-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <meta charset="UTF-8">
+    <title>DISMEMBER CAT</title>
+</head>
+<body>
+
+<div class="jumbotron header centered">
+    <h1><img id="pic1" src="css/images/pic1.jpg" height="200" width="200"> Welcome to DismemberCat! <img id="pic2" src="css/images/pic2.jpg" height="200" width="200"></h1>
+
+
+    <p><a class="btn btn-primary btn-lg  centered" id="play" role="button" onclick="displayNewWord()">Let's Play!</a>
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel content panel-default">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">Correct guesses: <span
+                                class="badge" id="correct">0</span></li>
+                        <li class="list-group-item list-group-item-danger">Incorrect Guesses: <span
+                                class="badge" id="incorrect">0</span></li>
+                        <li class="list-group-item list-group-item-info">Remaining guesses: <span class="badge"
+                                                                                                  id="remaining">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="well content well-lg centered">
+                <h2>Your Word Is <span id="word"></span></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container centered">
+    <div class="col-md-12">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-custom" id="a">A</button>
+            <button type="button" class="btn btn-custom" id="b">B</button>
+            <button type="button" class="btn btn-custom" id="c">C</button>
+            <button type="button" class="btn btn-custom" id="d">D</button>
+            <button type="button" class="btn btn-custom" id="e">E</button>
+            <button type="button" class="btn btn-custom" id="f">F</button>
+            <button type="button" class="btn btn-custom" id="g">G</button>
+            <button type="button" class="btn btn-custom" id="h">H</button>
+            <button type="button" class="btn btn-custom" id="i">I</button>
+            <button type="button" class="btn btn-custom" id="j">J</button>
+            <button type="button" class="btn btn-custom" id="k">K</button>
+            <button type="button" class="btn btn-custom" id="l">L</button>
+            <button type="button" class="btn btn-custom" id="m">M</button>
+            <button type="button" class="btn btn-custom" id="n">N</button>
+            <button type="button" class="btn btn-custom" id="o">O</button>
+            <button type="button" class="btn btn-custom" id="p">P</button>
+            <button type="button" class="btn btn-custom" id="q">Q</button>
+            <button type="button" class="btn btn-custom" id="r">R</button>
+            <button type="button" class="btn btn-custom" id="s">S</button>
+            <button type="button" class="btn btn-custom" id="t">T</button>
+            <button type="button" class="btn btn-custom" id="u">U</button>
+            <button type="button" class="btn btn-custom" id="v">V</button>
+            <button type="button" class="btn btn-custom" id="w">W</button>
+            <button type="button" class="btn btn-custom" id="x">X</button>
+            <button type="button" class="btn btn-custom" id="y">Y</button>
+            <button type="button" class="btn btn-custom" id="z">Z</button>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-center" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="userMsg">HOOMAN! LOOK WAT U DID TO KITTEH!!!</h4>
+            </div>
+            <div class="modal-body">
+                <img id="catImg" height="300" width="300">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="okBtn" data-dismiss="modal">OMG SO SORRY</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="js/hangman.js" type='text/javascript' language='javascript'></script>
+</body>
+</html>
