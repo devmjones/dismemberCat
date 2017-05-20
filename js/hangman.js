@@ -53,7 +53,7 @@ var hasLost = function () {
 };
 
 var addImageToModal = function (src) {
-    $("#catImg").attr("src", "css/images/"+src)
+    $("#catImg").attr("src", "css/images/" + src)
 };
 
 var changeElementText = function (id, text) {
@@ -85,12 +85,15 @@ var guessedWrong = function () {
     numGuessesRemaining--;
     updateGuessCounts();
     if (hasLost()) {
-        changeElementText("userMsg", "U KILLED KITTEH!!!");
-        addImageToModal("dead.jpg");
-        displayMsgModal();
+        setTimeout(function () {
+            changeElementText("userMsg", "U KILLED KITTEH!!!");
+            changeElementText("okBtn", "I DON'T DESERVE TO LIVE");
+            addImageToModal("dead.jpg");
+            displayMsgModal();
+        }, 0);
     }
     else {
-        addImageToModal(wrongImageSrcs[numWrong-1]);
+        addImageToModal(wrongImageSrcs[numWrong - 1]);
         displayMsgModal();
     }
 };
