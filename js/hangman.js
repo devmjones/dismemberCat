@@ -104,7 +104,6 @@ var displayNewWord = function () {
     $('.disabled').removeClass('disabled');
     if (index < words.length) {
         word = words[index];
-        console.log(word);
         dashes = new Array(word.length).fill('-');
         index++;
         updateWord();
